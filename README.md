@@ -1,16 +1,18 @@
 # multianchor README
 
-The selection anchor function now supports multiple cursors.
+The selection anchor function that supports multiple cursors.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The anchor in vscode does not support multiple cursors, so only one location can be selected. It works as shown in the following figure.
 
-For example if there is an image subfolder under your extension project workspace:
+![default-anchor-demo](images/default-anchor-demo.gif)
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+This extension supports multiple cursors and works as shown in the figure below.
+
+![multianchor-demo](images/multianchor-demo.gif)
+
 
 ## Requirements
 
@@ -18,22 +20,17 @@ nothing
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
+This extension contributes the following commands:
 
 * `multianchor.setAnchors`: Set anchors at multiple cursors position.
 * `multianchor.selectFromAnchors`: Select from anchors to multiple cursors position.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+nothing
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
 
 ### 0.0.1
 
