@@ -1,4 +1,4 @@
-# multianchor README
+# vscode-extension-multianchor README
 
 The selection anchor function that supports multiple cursors.
 
