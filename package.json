@@ -2,7 +2,7 @@
   "name": "multianchor",
   "displayName": "multianchor",
   "description": "selection anchor for multiple cursors",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "vsgutcode",
   "repository": {"type": "git", "url": "https://github.com/vsgutcode/vscode-extension-multianchor.git"},
   "engines": {
