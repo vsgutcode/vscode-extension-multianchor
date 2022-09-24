@@ -2,7 +2,7 @@
   "name": "multianchor",
   "displayName": "multianchor",
   "description": "selection anchor for multiple cursors",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "vsgutcode",
   "repository": {"type": "git", "url": "https://github.com/vsgutcode/vscode-extension-multianchor.git"},
   "engines": {
@@ -15,7 +15,8 @@
   "activationEvents": [
     "onCommand:multianchor.setAnchors",
     "onCommand:multianchor.selectFromAnchors",
-    "onCommand:multianchor.moveToFirstAnchor"
+    "onCommand:multianchor.moveToFirstAnchor",
+    "onCommand:multianchor.swapFirstAnchorAndCursor"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -31,6 +32,10 @@
       {
         "command": "multianchor.moveToFirstAnchor",
         "title": "multianchor: moveToFirstAnchor"
+      },
+      {
+        "command": "multianchor.swapFirstAnchorAndCursor",
+        "title": "multianchor: swapFirstAnchorAndCursor"
       }
     ]
   },

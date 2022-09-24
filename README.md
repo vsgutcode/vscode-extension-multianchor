@@ -25,6 +25,7 @@ This extension contributes the following commands:
 * `multianchor.setAnchors`: Set anchors at multiple cursors position.
 * `multianchor.selectFromAnchors`: Select from anchors to multiple cursors position.
 * `multianchor.moveToFirstAnchor`: Move cursor to first anchor.
+* `multianchor.swapFirstAnchorAndCursor`: Swap first anchor and cursor.
 
 ## Known Issues
 

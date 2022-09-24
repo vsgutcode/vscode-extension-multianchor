@@ -55,8 +55,6 @@ export function activate(context: vscode.ExtensionContext) {
 		editor!.selections = newSelections;
 	});
 	let disposable3 = vscode.commands.registerCommand('multianchor.moveToFirstAnchor', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
 		//vscode.window.showInformationMessage('selectfromanchors from multianchor!');
 		
 		const editor = vscode.window.activeTextEditor;
@@ -67,7 +65,6 @@ export function activate(context: vscode.ExtensionContext) {
         //const position = editor.selection.active;
 		const position = anchors[0];
 
-        //let newPosition = position.with(position.line, 0);
         //let newPosition = position.with(position.line, position.character);
         //let newSelection = new vscode.Selection(newPosition, newPosition);
         let newSelection = new vscode.Selection(position, position);
@@ -75,8 +72,22 @@ export function activate(context: vscode.ExtensionContext) {
 
 		//editor.selection.active = anchors[0];
 	});
+	let disposable4 = vscode.commands.registerCommand('multianchor.swapFirstAnchorAndCursor', () => {
+		const editor = vscode.window.activeTextEditor;
+		//editor?.options.cursorStyle
+		//vscode.commands.executeCommand('cursorMove', )
+		if(!editor || anchors.length === 0)return;
 
-	context.subscriptions.push(disposable, disposable2, disposable3);
+        //const position = editor.selection.active;
+		const position = anchors[0];
+        let newSelection = new vscode.Selection(position, position);
+		anchors[0] = editor.selection.active;
+        editor.selection = newSelection;
+
+		//editor.selection.active = anchors[0];
+	});
+
+	context.subscriptions.push(disposable, disposable2, disposable3, disposable4);
 }
 
 // this method is called when your extension is deactivated
