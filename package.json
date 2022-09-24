@@ -14,18 +14,23 @@
   "keywords": ["multi", "anchor", "selection"],
   "activationEvents": [
     "onCommand:multianchor.setAnchors",
-    "onCommand:multianchor.selectFromAnchors"
+    "onCommand:multianchor.selectFromAnchors",
+    "onCommand:multianchor.moveToFirstAnchor"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "multianchor.setAnchors",
-        "title": "multianchor:setAnchors"
+        "title": "multianchor: setAnchors"
       },
       {
         "command": "multianchor.selectFromAnchors",
         "title": "multianchor: selectFromAnchors"
+      },
+      {
+        "command": "multianchor.moveToFirstAnchor",
+        "title": "multianchor: moveToFirstAnchor"
       }
     ]
   },
