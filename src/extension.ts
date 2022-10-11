@@ -54,6 +54,12 @@ export function activate(context: vscode.ExtensionContext) {
   
 		editor!.selections = newSelections;
 	});
+	function scroll(editor:vscode.TextEditor, position:vscode.Position, opt:vscode.TextEditorRevealType = vscode.TextEditorRevealType.Default){
+        let newSelection = new vscode.Selection(position, position);
+        editor.selection = newSelection;
+		editor.revealRange(new vscode.Range(position, position), opt);
+
+	}
 	let disposable3 = vscode.commands.registerCommand('multianchor.moveToFirstAnchor', () => {
 		//vscode.window.showInformationMessage('selectfromanchors from multianchor!');
 		
@@ -67,8 +73,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         //let newPosition = position.with(position.line, position.character);
         //let newSelection = new vscode.Selection(newPosition, newPosition);
-        let newSelection = new vscode.Selection(position, position);
-        editor.selection = newSelection;
+		scroll(editor, position);
 
 		//editor.selection.active = anchors[0];
 	});
@@ -80,9 +85,8 @@ export function activate(context: vscode.ExtensionContext) {
 
         //const position = editor.selection.active;
 		const position = anchors[0];
-        let newSelection = new vscode.Selection(position, position);
 		anchors[0] = editor.selection.active;
-        editor.selection = newSelection;
+		scroll(editor, position);
 
 		//editor.selection.active = anchors[0];
 	});
