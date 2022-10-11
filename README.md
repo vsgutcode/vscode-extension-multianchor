@@ -34,6 +34,10 @@ nothing
 ## Release Notes
 
 
+### 0.0.5
+bugfix: Add scroll to move and swap commands.
+
+
 ### 0.0.3
 
 add moveToFirstAnchor.
